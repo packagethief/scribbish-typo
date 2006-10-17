@@ -13,8 +13,8 @@
                #content form.comments { display: none; } }
 
 body {
-	background: url(../../images/theme/background.gif) repeat-x left top;
-	font: normal 12px "lucida grande", verdana, sans-serif;
+  background: url(../../images/theme/background.gif) repeat-x left top;
+  font: normal 12px "lucida grande", verdana, sans-serif;
 }
 
 input,
@@ -26,3 +26,12 @@ a img { border: none; padding: 0; margin: 0; }
 
 a:link,  a:visited { color: #000; }
 a:hover, a:active  { color: #fff; background: #000; }
+
+/* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap !important;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
