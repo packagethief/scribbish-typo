@@ -8,13 +8,13 @@
 
 #header a:link,
 #header a:visited { 
-  color:#000;
+  color: #000;
   text-decoration: none;
 }
 
 #header a:hover,
 #header a:active {
-  color:#930; background: transparent;
+  color: #930; background: transparent;
   text-decoration: none;
 }
 
@@ -111,6 +111,13 @@
   overflow: auto;
   font: normal 12px "bitstream vera sans mono", monaco "lucida console", "courier new", courier, serif;
   margin: 0.9em 0; padding: 8px;
+
+  /* http://longren.org/2006/09/27/wrapping-text-inside-pre-tags */
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap !important;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }
 
 /* Article Entries - class names based on http://microformats.org/wiki/hatom] */
@@ -175,8 +182,8 @@
 #content .atomentry .meta a:link,
 #content .atomentry .meta a:visited {
   color: #555;
-        text-decoration: none;
-        border-bottom: 1px dotted #aaa;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
 }
 
 #content .atomentry .meta a:hover,
@@ -230,7 +237,6 @@
   float: right; 
 }
 
-
 #content form.comments {
   background: #f2f2f2;
   border-top: 1px solid #ddd;
@@ -257,6 +263,7 @@
 /*--------------------------------------------------------------
  Sidebar
  --------------------------------------------------------------*/
+
 #sidebar {
   font-size: 11px; 
 }
