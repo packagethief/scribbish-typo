@@ -205,7 +205,7 @@
   margin: 0 0 1.5em; padding: 1em;
 }
 
-#content li.comment.preview { 
+#content div.comment.preview { 
   background: #ffc;
   border: 3px solid #fab444;
 }
