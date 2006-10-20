@@ -205,9 +205,10 @@
   margin: 0 0 1.5em; padding: 1em;
 }
 
-#content div.comment.preview { 
+#content li.comment.preview { 
   background: #ffc;
   border: 3px solid #fab444;
+  margin: 0 0 1.5em; padding: 1em;
 }
 
 #content li.comment   .author,
