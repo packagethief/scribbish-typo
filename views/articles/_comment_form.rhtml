@@ -39,10 +39,11 @@
   </p>
   
   <p>
-    <%= submit_to_remote('preview', 'Preview!',
-                         :update => 'preview',
-                         :complete => "Element.show('preview')",
-                         :url    => { :action => 'comment_preview' }) %>
+    <%= submit_to_remote('preview', 'Preview',
+                         :update   => 'preview',
+                         :loading  => "Element.show('spinner')",
+                         :complete => "Element.show('preview'); Element.hide('spinner')",
+                         :url      => { :action => 'comment_preview' }) %>
     <%= submit_tag 'Submit', :onclick => "this.disabled=true; Element.hide('preview');" %>
     <%= image_tag '/images/theme/spinner.gif', :id => 'spinner', :style => 'display:none' %>
   </p>
