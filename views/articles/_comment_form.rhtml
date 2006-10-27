@@ -44,7 +44,7 @@
                          :update   => 'preview',
                          :loading  => "Element.show('spinner')",
                          :complete => "Element.show('preview'); Element.hide('spinner')") %>
-    <%= submit_tag 'Submit', :onclick => "$('commentform').onsubmit(); this.disabled=true;" %>
+    <%= submit_tag 'Submit' %>
     <%= image_tag '/images/theme/spinner.gif', :id => 'spinner', :style => 'display:none' %>
   </p>
 </fieldset>
