@@ -42,7 +42,7 @@
 #content h3,
 #content h4,
 #content h5 { 
-  font-family: georgia, times; font-weight: normal;
+  font-family: georgia, times;
   font-weight: normal;
   letter-spacing: -1px;
 }
@@ -53,7 +53,7 @@
 }
 
 #content h2 { 
-  font-size: 26px;
+  font-size: 24px;
   margin: 0 0 0.3em;  
 }
 
@@ -119,14 +119,14 @@
 }
 
 #content .hentry .entry-title {
-  font-size: 34px;
+  font-size: 32px;
   line-height: 94%;
   letter-spacing: -1.5px; 
-  margin: 0
+  margin: 0;
 }
 
 #content .hentry .entry-title a:link,
-#content .hentry .engry-title a:visited { 
+#content .hentry .entry-title a:visited { 
   color: #111;
   text-decoration: none;
 }
