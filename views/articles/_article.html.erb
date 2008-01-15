@@ -7,8 +7,8 @@
     <% end %>
     
     <% if article.published_comments.size > 0 %>
-      <span>
-        <%= article.published_comments.size, :class => 'comment_count' %>
+      <span class="comment_count">
+        <%= article.published_comments.size %>
       </span>
     <% end %>
   </h2>
@@ -39,8 +39,8 @@
     <%= content_tag(:li, category_links(article), :class => 'categories') unless article.categories.empty? %>
     <%= content_tag(:li, tag_links(article), :class => 'tags') unless article.tags.empty? %>
     <li>Meta
-      <%= trackbacks_link(article) << ',' if article.allow_pings? %>
       <%= comments_link(article)   << ',' if article.allow_comments? %>
+      <%= trackbacks_link(article) << ',' if article.allow_pings? %>
       <a href="<%= article.permalink_url %>" rel="bookmark">permalink</a>,
       <a href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'rss',  :id => article %>">rss</a>,
       <a href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'atom', :id => article %>">atom</a>

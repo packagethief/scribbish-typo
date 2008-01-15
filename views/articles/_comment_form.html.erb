@@ -1,8 +1,10 @@
-<% form_remote_tag :url => {:action => 'comment', :id => @article},
-     :update   => 'comments',
-     :loading  => "Element.show('spinner'); Element.hide('preview')",
-     :complete => "Element.hide('spinner'); $('commentform').elements['comment_body'].value = ''",
-     :html     => { :id => 'commentform', :class => 'comments' } do %>
+<% form_remote_tag :url => comments_path(@article),
+     :position => :bottom,
+     :update   => { :success => "commentList" },
+     :loading  => "loading()",
+     :complete => "complete(request)",
+     :failure  => "failure(request)",
+     :html     => { :id => 'commentform', :class => "comments" } do %>
 
 <div id="preview" style="display:none"></div>
 
@@ -39,7 +41,7 @@
   </p>
 
   <p>
-    <%= submit_to_remote('preview', 'Preview', :url => preview_new_comment_path(@article)), :update => 'preview', :complete => "Element.show('preview')" %>
+    <%= submit_to_remote 'preview', 'Preview', :url => preview_new_comment_path(@article), :update => 'preview', :complete => "Element.show('preview')" %>
     <%= submit_tag 'Submit', :id => 'form-submit-button',  :onclick => "$('commentform').onsubmit(); this.disabled=true; Element.hide('preview'); return false;" %>
     <%= image_tag '/images/theme/spinner.gif', :id => 'comment_loading', :style => 'display:none' %>
   </p>

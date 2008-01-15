@@ -1,4 +1,4 @@
-<ol id="comments" class="comments">
+<ol id="commentList" class="comments">
   <% if @article.published_comments.any? -%>
     <%= render(:partial => "comment", :collection => @article.published_comments) %>
   <% else -%>
